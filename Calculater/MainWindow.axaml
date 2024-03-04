@@ -1,0 +1,108 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="1000"
+        x:Class="Calculater.MainWindow"
+        MaxHeight="400"
+        MinHeight="400"
+        MaxWidth="410"
+        MinWidth="400"
+        Title="Calculater">
+   
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="2" Background="White" Height="50" Width="50" Grid.Column="0" FontSize="20"> MC</Button>
+        <Button Grid.Row="2" Background="White" Height="50" Width="50" Grid.Column="1" FontSize="20">MR </Button>
+        <Button Grid.Row="2" Background="White" Height="50" Width="50" Grid.Column="2" FontSize="20">MS</Button>
+        <Button Grid.Row="2" Background="White" Height="50" Width="50" Grid.Column="3" FontSize="20">M+</Button>
+        <Button Grid.Row="2" Background="White" Height="50" Width="50" Grid.Column="4" FontSize="20">M-</Button>
+        <Button Grid.Row="3" Background="White" Height="50" Width="50" Grid.Column="0" FontSize="20"> ← </Button>
+        <Button Grid.Row="3" Name ="ButtonDelite" Background="White" Height="50" Width="50" Grid.Column="1" FontSize="20">Ce</Button>
+        <Button Grid.Row="3" Background="White" Height="50" Width="50" Grid.Column="2" FontSize="20">C</Button>
+        <Button Grid.Row="3" Name = "ButtonPlusMinus" Background="White" Height="50" Width="50" Grid.Column="3" FontSize="25">±</Button>
+        <Button Grid.Row="3" Name = "ButtonRoot" Background="White" Height="50" Width="50" Grid.Column="4" FontSize="25">√</Button>
+        <Button Grid.Row="4" Name = "ButtonSeven" Background="White" Height="50" Width="50" Grid.Column="0" FontSize="25">7</Button>
+        <Button Grid.Row="4" Name = "ButtonEight" Background="White" Height="50" Width="50" Grid.Column="1" FontSize="25">8</Button>
+        <Button Grid.Row="4" Name = "ButtonNine" Background="White" Height="50" Width="50" Grid.Column="2" FontSize="25">9</Button>
+        <Button Grid.Row="4" Name = "ButtonDivision" Background="White" Height="50" Width="50" Grid.Column="3" FontSize="25">/</Button>
+        <Button Grid.Row="4" Name = "ButtonPersent" Background="White" Height="50" Width="50" Grid.Column="4" FontSize="25">%</Button>
+        <Button Grid.Row="5" Name = "ButtonFour" Background="White" Height="50" Width="50" Grid.Column="0" FontSize="25">4</Button>
+        <Button Grid.Row="5" Name = "ButtonFive" Background="White" Height="50" Width="50" Grid.Column="1" FontSize="25">5</Button>
+        <Button Grid.Row="5" Name = "ButtonSix" Background="White" Height="50" Width="50" Grid.Column="2" FontSize="25">6</Button>
+        <Button Grid.Row="5" Name = "ButtonMulti" Background="White" Height="50" Width="50" Grid.Column="3" FontSize="25">* </Button>
+        <Button Grid.Row="5" Name = "ButtonSom" Background="White" Height="50" Width="50" Grid.Column="4" FontSize="25">1/x</Button>
+        <Button Grid.Row="6" Name = "ButtonOne" Background="White" Height="50" Width="50" Grid.Column="0" FontSize="25">1</Button>
+        <Button Grid.Row="6" Name = "ButtonTwo" Background="White" Height="50" Width="50" Grid.Column="1" FontSize="25">2</Button>
+        <Button Grid.Row="6" Name = "ButtonThree" Background="White" Height="50" Width="50" Grid.Column="2" FontSize="25">3</Button>
+        <Button Grid.Row="6" Name = "ButtonMinus" Background="White" Height="50" Width="50" Grid.Column="3" FontSize="25" Content = "-"> </Button>
+        <Button Grid.Row="6" Name = "ButtonTransitoin" Background="White" Height="50" Width="50" Grid.Column="4" FontSize="25">-></Button>
+        <Button Grid.Row="7" Name = "ButtonZerro" Background="White" Height="50"  Grid.Column="0" FontSize="30"
+            
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            Width="100"
+            Content="0"
+            >
+        </Button>
+        <Button Grid.Row="7" Name= "ButtonСomma"  Background="White" Height="50" Width="50" Grid.Column="2" FontSize="25">,</Button>
+        <Button Grid.Row="7" Name= "ButtonPlus" Background="White" Height="50" Width="50" Grid.Column="3" FontSize="25">+</Button>
+        <Button 
+            Grid.Row="7" 
+            Name="ButtonEquals" 
+            Background="White" 
+            Height="50" 
+            Width="50" 
+            Grid.Column="4"
+            FontSize="25"
+            Content= "=">
+        </Button>
+        <TextBlock
+            Name="NumberDisplay"
+            HorizontalAlignment="Right"
+            Grid.Column="0"
+            Grid.Row="0"
+           Grid.ColumnSpan="7"
+           Grid.RowSpan="2"
+           FontSize="30"
+            Text="0"
+           >
+        </TextBlock>
+        <Button Grid.Row="2" Name= "ButtonSquare"  Background="White" Height="50" Width="50" Grid.Column="5" FontSize="25">Х²</Button>
+        <Button Grid.Row="2" Name= "ButtonСube"  Background="White" Height="50" Width="50" Grid.Column="6" FontSize="25">X³</Button>
+        <Button Grid.Row="2" Name= "ButtonXY"  Background="White" Height="50" Width="55" Grid.Column="7" FontSize="20">X^Y</Button>
+        <Button Grid.Row="3" Name= "ButtonRootThree"  Background="White" Height="50" Width="55" Grid.Column="5" FontSize="20">3√x</Button>
+        <Button Grid.Row="3" Name= "ButtonTenX"  Background="White" Height="50" Width="55" Grid.Column="6" FontSize="18">10^x</Button>
+        <Button Grid.Row="3" Name= "ButtonPI"  Background="White" Height="50" Width="55" Grid.Column="7" FontSize="25">Pi</Button>
+        <Button Grid.Row="4" Name= "ButtonSin"  Background="White" Height="50" Width="55" Grid.Column="5" FontSize="25">Sin</Button>
+        <Button Grid.Row="4" Name= "ButtonCos"  Background="White" Height="50" Width="55" Grid.Column="6" FontSize="20">Cos</Button>
+        <Button Grid.Row="4" Name= "ButtonTgn"  Background="White" Height="50" Width="55" Grid.Column="7" FontSize="22">Tan</Button>
+        <Button Grid.Row="5" Name= "ButtonFactorial"  Background="White" Height="50" Width="55" Grid.Column="5" FontSize="25">!</Button>
+        <Button Grid.Row="5" Name= "ButtonLog"  Background="White" Height="50" Width="55" Grid.Column="6" FontSize="21">Log</Button>
+        
+        
+        
+        
+        
+    </Grid>
+    
+</Window>
