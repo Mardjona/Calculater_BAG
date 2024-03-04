@@ -46,14 +46,14 @@ public partial class MainWindow : Window
         ButtonLog.Click += ButtonLogOnClick;
         ButtonСomma.Click += ButtonСommaOnClick; // 
     }
-    private void ButtonDeliteOnClick(object? sender, RoutedEventArgs e)
+    private void ButtonDeliteOnClick(object? sender, RoutedEventArgs e) // удалить Се
     {
         Number = null;
         Temp = "";
         Operation = null;
         NumberDisplay.Text = null;
     }
-    private void ButtonZerroOnClick(object? sender, RoutedEventArgs e)
+    private void ButtonZerroOnClick(object? sender, RoutedEventArgs e)   // 0
     {
         if (Operation == null)
         {
@@ -66,7 +66,7 @@ public partial class MainWindow : Window
             NumberDisplay.Text = Temp;
         }
     }
-    private void ButtonOneOnClick(object? sender, RoutedEventArgs e)
+    private void ButtonOneOnClick(object? sender, RoutedEventArgs e) //1
     {
         if (Operation == null)
         {
@@ -81,7 +81,7 @@ public partial class MainWindow : Window
 
         }
     }
-    private void ButtonTwoOnclick(object? sender, RoutedEventArgs e)
+    private void ButtonTwoOnclick(object? sender, RoutedEventArgs e)  //2
     {
         if (Operation == null)
         {
@@ -95,7 +95,7 @@ public partial class MainWindow : Window
 
         }
     }
-    private void ButtonThreeOnClick(object? sender, RoutedEventArgs e)
+    private void ButtonThreeOnClick(object? sender, RoutedEventArgs e)  //3
     {
         if (Operation == null)
         {
@@ -110,7 +110,7 @@ public partial class MainWindow : Window
 
         }
     }
-    private void ButtonFourOnclick(object? sender, RoutedEventArgs e)
+    private void ButtonFourOnclick(object? sender, RoutedEventArgs e)  //4
     {
         if (Operation == null)
         {
@@ -125,7 +125,7 @@ public partial class MainWindow : Window
 
         }
     }
-    private void ButtonFiveOnClick(object? sender, RoutedEventArgs e)
+    private void ButtonFiveOnClick(object? sender, RoutedEventArgs e)  //5
     {
         if (Operation == null)
         {
@@ -139,7 +139,7 @@ public partial class MainWindow : Window
         }
     }
 
-    private void ButtonSixOnclick(object? sender, RoutedEventArgs e)
+    private void ButtonSixOnclick(object? sender, RoutedEventArgs e) //6
     {
         if (Operation == null)
         {
@@ -154,7 +154,7 @@ public partial class MainWindow : Window
 
         }
     }
-    private void ButtonSevenOnclick(object? sender, RoutedEventArgs e)
+    private void ButtonSevenOnclick(object? sender, RoutedEventArgs e)  //7
     {
         if (Operation == null)
         {
@@ -168,7 +168,7 @@ public partial class MainWindow : Window
 
         }
     }
-    private void ButtonEightOnclick(object? sender, RoutedEventArgs e)
+    private void ButtonEightOnclick(object? sender, RoutedEventArgs e)  //8
     {
         if (Operation == null)
         {
@@ -183,7 +183,7 @@ public partial class MainWindow : Window
         }
     }
 
-    private void ButtonNineOnClick(object? sender, RoutedEventArgs e)
+    private void ButtonNineOnClick(object? sender, RoutedEventArgs e) //9
     {
         if (Operation == null)
         {
@@ -196,7 +196,7 @@ public partial class MainWindow : Window
             NumberDisplay.Text = 9.ToString();
         }
     }
-    private void ButtonEqualsOnClick(object? sender, RoutedEventArgs e) // равно
+    private void ButtonEqualsOnClick(object? sender, RoutedEventArgs e) // равно 
     {
         Number = Convert.ToString(Calc(Operation));
         NumberDisplay.Text = Number;
@@ -321,8 +321,8 @@ public partial class MainWindow : Window
     }
     private double Factorial(double f)
     {
-        int result = 1;
-        for (int i = 2; i <= f; i++)
+        var result = 1;
+        for (var i = 2; i <= f; i++)
         {
             result *= i;
         }
