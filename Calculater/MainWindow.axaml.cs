@@ -44,11 +44,31 @@ public partial class MainWindow : Window
         ButtonTgn.Click += ButtonTgnOnClick; // тангенс
         ButtonFactorial.Click += ButtonFactorialOnClick; // факториал
         ButtonLog.Click += ButtonLogOnClick;
-        ButtonСomma.Click += ButtonСommaOnClick; // 
+        ButtonСomma.Click += ButtonСommaOnClick; // запятая
+        ButtonBack.Click += ButtonBackOnClick; // удаление по одной цыфре 
+        
+
+    }
+
+    bool   ButtonEqualsClick = false;
+
+    private void ButtonBackOnClick(object? sender, RoutedEventArgs e)
+    {
+        if (Operation == null)
+        {
+            Number = Number.Remove(Number.Length - 1);
+            NumberDisplay.Text = Number;
+        }
+        else
+        {
+            Temp = Temp.Remove(Temp.Length - 1);
+            NumberDisplay.Text = Temp;
+        }
+
     }
     private void ButtonDeliteOnClick(object? sender, RoutedEventArgs e) // удалить Се
     {
-        Number = null;
+        Number = "";
         Temp = "";
         Operation = null;
         NumberDisplay.Text = null;
@@ -57,12 +77,12 @@ public partial class MainWindow : Window
     {
         if (Operation == null)
         {
-            Number += 0;
+            Number += 0.ToString();
             NumberDisplay.Text = Number;
         }
         else
         {
-            Temp += 0;
+            Temp += 0.ToString();
             NumberDisplay.Text = Temp;
         }
     }
@@ -70,14 +90,14 @@ public partial class MainWindow : Window
     {
         if (Operation == null)
         {
-            Number += 1;
-            NumberDisplay.Text = 1.ToString();
-            
+            Number += 1.ToString();
+            NumberDisplay.Text = Number;
+
         }
         else
         {
-            Temp += 1;
-            NumberDisplay.Text = 1.ToString();
+            Temp += 1.ToString();
+            NumberDisplay.Text = Temp;
 
         }
     }
@@ -85,13 +105,13 @@ public partial class MainWindow : Window
     {
         if (Operation == null)
         {
-            Number += 2;
-            NumberDisplay.Text = 2.ToString();
+            Number += 2.ToString();
+            NumberDisplay.Text = Number;
         }
         else
         {
-            Temp += 2;
-            NumberDisplay.Text = 2.ToString();
+            Temp += 2.ToString();
+            NumberDisplay.Text =Temp;
 
         }
     }
@@ -99,14 +119,14 @@ public partial class MainWindow : Window
     {
         if (Operation == null)
         {
-            Number += 3;
-            NumberDisplay.Text = 3.ToString();
+            Number += 3.ToString();
+            NumberDisplay.Text = Number;
 
         }
         else
         {
-            Temp += 3;
-            NumberDisplay.Text = 3.ToString();
+            Temp += 3.ToString();
+            NumberDisplay.Text = Temp;
 
         }
     }
@@ -114,14 +134,14 @@ public partial class MainWindow : Window
     {
         if (Operation == null)
         {
-            Number += 4;
-            NumberDisplay.Text = 4.ToString();
+            Number += 4.ToString();
+            NumberDisplay.Text = Number;
 
         }
         else
         {
-            Temp += 4;
-            NumberDisplay.Text = 4.ToString();
+            Temp +=4.ToString();
+            NumberDisplay.Text = Temp;
 
         }
     }
@@ -129,13 +149,13 @@ public partial class MainWindow : Window
     {
         if (Operation == null)
         {
-            Number += 5;
-            NumberDisplay.Text = 5.ToString();
+            Number += 5.ToString();
+            NumberDisplay.Text = Number;
         }
         else
         {
-            Temp += 5;
-            NumberDisplay.Text = 5.ToString();
+            Temp += 5.ToString();
+            NumberDisplay.Text = Temp;
         }
     }
 
@@ -143,14 +163,14 @@ public partial class MainWindow : Window
     {
         if (Operation == null)
         {
-            Number += 6;
-            NumberDisplay.Text = 6.ToString();
+            Number += 6.ToString();
+            NumberDisplay.Text = Number;
 
         }
         else
         {
             Temp += 6.ToString();
-            NumberDisplay.Text = 6.ToString();
+            NumberDisplay.Text = Number;
 
         }
     }
@@ -158,8 +178,8 @@ public partial class MainWindow : Window
     {
         if (Operation == null)
         {
-            Number += 7;
-            NumberDisplay.Text = 7.ToString();
+            Number += 7.ToString();
+            NumberDisplay.Text = Number;
         }
         else
         {
@@ -172,14 +192,14 @@ public partial class MainWindow : Window
     {
         if (Operation == null)
         {
-            Number += 8;
-            NumberDisplay.Text = 8.ToString();
+            Number += 8.ToString();
+            NumberDisplay.Text = Number;
 
         }
         else
         {
-            Temp += 8;
-            NumberDisplay.Text = 8.ToString();
+            Temp += 8.ToString();
+            NumberDisplay.Text =Temp;
         }
     }
 
@@ -187,20 +207,31 @@ public partial class MainWindow : Window
     {
         if (Operation == null)
         {
-            Number += 9;
-            NumberDisplay.Text = 9.ToString();
+            Number += 9.ToString();
+            NumberDisplay.Text = Number;
         }
         else
         {
-            Temp += 9;
-            NumberDisplay.Text = 9.ToString();
+            Temp += 9.ToString();
+            NumberDisplay.Text =Temp;
         }
     }
     private void ButtonEqualsOnClick(object? sender, RoutedEventArgs e) // равно 
     {
-        Number = Convert.ToString(Calc(Operation));
-        NumberDisplay.Text = Number;
-        Temp = " ";
+           if (!ButtonEqualsClick)
+           {
+               ButtonEqualsClick = true;
+               Number = Convert.ToString(Calc(Operation));
+               NumberDisplay.Text = Number;
+               Temp = " ";
+               ButtonEquals = null;
+           }
+        
+
+        
+
+
+
 
 
     }
@@ -246,7 +277,7 @@ public partial class MainWindow : Window
     private void ButtonPersentOnClick(object? sender, RoutedEventArgs e)
     {
         Operation = "persent";
-        NumberDisplay.Text = "0";
+        NumberDisplay.Text = "%";
     } // процент
     private void ButtonSomOnclick(object? sender, RoutedEventArgs e) // 1 деленное на число
     {

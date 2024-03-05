@@ -57,7 +57,7 @@
             M-
         </Button>
         <Button 
-            Grid.Row="3" Background="White" Height="50" Width="50" 
+            Grid.Row="3" Name = "ButtonBack"  Background="White" Height="50" Width="50" 
             Grid.Column="0" FontSize="20">
              ←
         </Button>
@@ -84,7 +84,7 @@
         <Button 
             Grid.Row="4" Name = "ButtonSeven" Background="White" Height="50" Width="50" 
             Grid.Column="0" FontSize="25">
-            7
+         7
         </Button>
         <Button 
             Grid.Row="4" Name = "ButtonEight" Background="White" Height="50" Width="50"

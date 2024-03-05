@@ -129,3 +129,4 @@
 /Users/admin/RiderProjects/Calculater/Calculater/obj/Debug/net8.0/Calculater.csproj.CopyComplete
 /Users/admin/RiderProjects/Calculater/Calculater/obj/Debug/net8.0/Calculater.genruntimeconfig.cache
 /Users/admin/RiderProjects/Calculater/Calculater/obj/Debug/net8.0/ref/Calculater.dll
+/Users/admin/RiderProjects/Calculater/Calculater/obj/Debug/net8.0/Calculater.sourcelink.json
