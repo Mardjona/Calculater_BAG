@@ -52,6 +52,11 @@ public partial class MainWindow : Window
 
     bool   ButtonEqualsClick = false;
 
+    private void Operation_Click(object? sender, RoutedEventArgs e)
+    {
+        ButtonEqualsClick = true;
+    }
+
     private void ButtonBackOnClick(object? sender, RoutedEventArgs e)
     {
         if (Operation == null)
@@ -218,22 +223,16 @@ public partial class MainWindow : Window
     }
     private void ButtonEqualsOnClick(object? sender, RoutedEventArgs e) // равно 
     {
+     
            if (!ButtonEqualsClick)
            {
-               ButtonEqualsClick = true;
                Number = Convert.ToString(Calc(Operation));
                NumberDisplay.Text = Number;
                Temp =  " ";
-               ButtonEquals =  null;
+               ButtonEqualsClick = false;
+
+
            }
-        
-
-        
-
-
-
-
-
     }
     private void ButtonСommaOnClick(object? sender, RoutedEventArgs e) // плавающая запятая
     {
