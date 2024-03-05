@@ -223,7 +223,7 @@ public partial class MainWindow : Window
                ButtonEqualsClick = true;
                Number = Convert.ToString(Calc(Operation));
                NumberDisplay.Text = Number;
-               Temp = " ";
+               Temp =  " ";
                ButtonEquals =  null;
            }
         
