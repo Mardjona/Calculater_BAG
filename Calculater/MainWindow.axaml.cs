@@ -224,7 +224,7 @@ public partial class MainWindow : Window
                Number = Convert.ToString(Calc(Operation));
                NumberDisplay.Text = Number;
                Temp = " ";
-               ButtonEquals = null;
+               ButtonEquals =  null;
            }
         
 
